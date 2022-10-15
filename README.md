@@ -47,3 +47,5 @@ Controller, MVC Design Pattern’de yönetici pozisyonundadır. Kullanıcı ile 
 Model katmanı Controller ve View ‘den bağımsız olarak test edilebilir. (Çünkü Model katmanı bir adım atarken diğerleriyle iletişim kurma gibi bir durumu yok.)
 
 ![Untitled](Notes/img/Untitled%203.png)
+
+[Controller](Notes/controller/README.md)
