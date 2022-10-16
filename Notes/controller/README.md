@@ -7,7 +7,7 @@
 - ActionResult →  Bir sayfaya karşılık olarak gelen View yapısı, Action Result dönüş tipidir.
 - ContentResult → String ifade döndürmek istediğimizde kullanabileceğimiz dönüş tipidir.
 - JsonResult → AJAX isteklerinde kullanacağımız dönüş tiplerinden bir tanesidir.
-- EmptyResult →
+- EmptyResult
 
 ![Untitled](Untitled%201.png)
 
@@ -64,5 +64,48 @@ namespace MyAspNetCoreApp.Web.Controllers
 <aside>
 
 💡 return View(); ile View dönüldüğünde .cshtml sayfası oluşturmamız gerekir. Diğer action methodlar için .cshtml sayfası oluşturmamıza gerek yoktur.
+
+</aside>
+
+### RedirectoAction Method
+
+Bir action methottan başka bir action methoda yönlendirme yapabilmemizi sağlar.
+
+Kullanım Alanı: 
+
+Kullanıcıdan form üzerinden bilgileri alıp işledikten sonra kullanıcıyı farklı bir sayfaya yönlendirmek istersek bu methodu kullanabiliriz.  Kullanıcyı yönlendirdiğimiz sayfada ise “Bilgileriniz alınmıştır” vb. şeyler yazarak kullanıcıya bilgi verebiliriz.
+
+```csharp
+//OrnekController.cs
+public IActionResult Index()
+{
+    return View();
+}
+
+public IActionResult Index2()
+{
+    return RedirectToAction("Index", "Ornek");
+}
+// Index -> Gidilecek sayfa
+// Ornek -> Controller
+```
+
+![Untitled](Untitled%206.png)
+
+- https://localhost:7188/ornek/index
+
+![Untitled](Untitled%207.png)
+
+- https://localhost:7188/ornek/index2
+
+```csharp
+app.MapControllerRoute(
+name: "default",
+pattern: "{controller=Home}/{action=Index}/{id?}");
+```
+
+<aside>
+
+💡 default action Index olduğu için https://localhost:7188/ornek/index2 ile https://localhost:7188/ornek/index2 aynı şeyi temsil eder.
 
 </aside>
