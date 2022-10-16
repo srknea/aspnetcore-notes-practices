@@ -92,11 +92,11 @@ public IActionResult Index2()
 
 ![Untitled](Untitled%206.png)
 
-- https://localhost:7188/ornek/index
+- localhost:7188/ornek/index
 
 ![Untitled](Untitled%207.png)
 
-- https://localhost:7188/ornek/index2
+- localhost:7188/ornek/index2
 
 ```csharp
 app.MapControllerRoute(
@@ -106,6 +106,6 @@ pattern: "{controller=Home}/{action=Index}/{id?}");
 
 <aside>
 
-💡 default action Index olduğu için https://localhost:7188/ornek/index2 ile https://localhost:7188/ornek/index2 aynı şeyi temsil eder.
+💡 default action Index olduğu için localhost:7188/ornek ile localhost:7188/ornek/index aynı şeyi temsil eder.
 
 </aside>
