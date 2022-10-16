@@ -67,7 +67,7 @@ namespace MyAspNetCoreApp.Web.Controllers
 
 </aside>
 
-### RedirectoAction Method
+## RedirectoAction Method
 
 Bir action methottan başka bir action methoda yönlendirme yapabilmemizi sağlar.
 
@@ -99,6 +99,7 @@ public IActionResult Index2()
 - localhost:7188/ornek/index2
 
 ```csharp
+//Program.cs
 app.MapControllerRoute(
 name: "default",
 pattern: "{controller=Home}/{action=Index}/{id?}");
@@ -106,6 +107,117 @@ pattern: "{controller=Home}/{action=Index}/{id?}");
 
 <aside>
 
-💡 default action Index olduğu için localhost:7188/ornek ile localhost:7188/ornek/index aynı şeyi temsil eder.
+💡 default action Index olduğu için https://localhost:7188/ornek ile https://localhost:7188/ornek/index aynı şeyi temsil eder.
 
 </aside>
+
+## ****Action Method Parametre Tanımlama****
+
+Action methodlar arasında yönlendirme yapma:
+
+```csharp
+//Program.cs
+app.MapControllerRoute(
+name: "default",
+pattern: "{controller=Home}/{action=Index}/{id?}");
+```
+
+Action methodlar arasında yönlendirme yapma:
+
+```csharp
+//OrnekController.cs
+/*
+Parametre isimleri OrnekController.cs dosyasındaki isimlerle aynı olmalıdır.
+{id?}
+*/
+public IActionResult ParametreView()
+{
+    return RedirectToAction("JsonResultParametre", "Ornek", new { Id = 222 });
+}
+public IActionResult JsonResultParametre(int id)
+{
+    return Json(new { Id = id, name = "Kalem", price = 100 });
+}
+```
+
+![Untitled](Untitled%208.png)
+
+Yukarıdaki linki yazınca aşağıdaki sonucu alırız…
+
+![Untitled](Untitled%209.png)
+
+Action methodlar arasında yönlendirme yapma ve başka bir action methoda parametre geçme işlemi:
+
+```csharp
+//Program.cs
+app.MapControllerRoute(
+name: "default",
+pattern: "{controller=Home}/{action=Index}/{id?}");
+```
+
+```csharp
+//OrnekController.cs
+/*
+Parametre isimleri OrnekController.cs dosyasındaki isimlerle aynı olmalıdır.
+{id?}
+(int id)
+*/
+public IActionResult ParametreView(int id)
+{
+    return RedirectToAction("JsonResultParametre", "Ornek", new { Id = id });
+}
+public IActionResult JsonResultParametre(int id)
+{
+    return Json(new { Id = id, name = "Kalem", price = 100 });
+}
+```
+
+![Untitled](Untitled%2010.png)
+
+Yukarıdaki linki yazınca aşağıdaki sonucu alırız…
+
+![Untitled](Untitled%2011.png)
+
+---
+
+# ****Veri Taşıma Yöntemleri (Controller-View)****
+
+- ViewBag
+- ViewData
+- TempData
+- ViewModel
+
+## ViewBag
+
+```csharp
+//OrnekController.cs
+
+public IActionResult Index()
+{
+    ViewBag.name = "Serkan";
+
+    return View();
+}
+```
+
+```csharp
+
+//Index.cshtml
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Ornek Controller, Index Sayfası</h1>
+
+<p>@ViewBag.name</p>
+
+@{
+    var name = ViewBag.name;
+    <p>@name</p>
+}
+
+<p>@name</p>
+```
+
+![Untitled](Untitled%2012.png)
