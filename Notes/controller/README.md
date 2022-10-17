@@ -307,3 +307,101 @@ public IActionResult Index()
 ```
 
 ![Untitled](Untitled%2015.png)
+
+<aside>
+
+📌 ViewBag ve ViewData kullanıldığı action methodun kendi .cshtml sayfasına veri taşır.
+
+</aside>
+
+<aside>
+
+📌 TempData, bir action methottan başka bir action methoda veri taşımak için kullanılır.
+
+</aside>
+
+## TempData
+
+![Untitled](Untitled%2016.png)
+
+Index.cshtml sayfasından TextIndex.cshtml sayfasına veri taşıyalım…
+
+```csharp
+public IActionResult Index()
+{
+
+    TempData["brand"] = "Microsoft";
+
+    return View();
+}
+
+public IActionResult TestIndex()
+{
+    return View();
+}
+```
+
+```csharp
+//TestIndex.cshtml
+
+@{
+    ViewData["Title"] = "TestIndex";
+}
+
+<h1>TestIndex Sayfası</h1>
+
+<p>Marka: @TempData["brand"]</p>
+```
+
+![Untitled](Untitled%2017.png)
+
+## ViewModel
+
+<aside>
+
+💡 ViewModel hacimli dataları taşımak için kullanılır. Örneğin, bir tabloya veri taşımak için.
+
+</aside>
+
+```csharp
+//OrnekController.cs
+---
+public class Product
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+}
+
+public IActionResult Index()
+{
+    var productList = new List<Product>()
+    {
+       //new () {Id=1, Name="Cetvel"},
+       new Product() {Id=1, Name="Cetvel"},
+       new Product() { Id = 2, Name = "Çanta" },
+       new Product() { Id = 3, Name = "Silgi" }
+    };
+
+    return View(productList);
+}
+---
+```
+
+```csharp
+//Index.cshtml
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Ornek Controller, Index Sayfası</h1>
+
+@foreach (var item in Model)
+{
+    <p>@item.Id - @item.Name</p>
+}
+
+//Eğitim videosundaki kodu yazınca CS0246 hatası alınıyor...
+//https://learn.microsoft.com/en-us/dotnet/csharp/misc/cs0273
+```
+
+![Untitled](Untitled%2018.png)
