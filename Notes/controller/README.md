@@ -191,13 +191,14 @@ Yukarıdaki linki yazınca aşağıdaki sonucu alırız…
 
 ```csharp
 //OrnekController.cs
-
+---
 public IActionResult Index()
 {
     ViewBag.name = "Serkan";
 
     return View();
 }
+---
 ```
 
 ```csharp
@@ -221,3 +222,88 @@ public IActionResult Index()
 ```
 
 ![Untitled](Untitled%2012.png)
+
+```csharp
+//OrnekController.cs
+---
+public IActionResult Index()
+{
+    ViewBag.person = new { Id = 231, Name = "Serkan" };
+
+    return View();
+}
+---
+```
+
+```csharp
+//Index.cshtml
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Ornek Controller, Index Sayfası</h1>
+
+<p>@ViewBag.person.Id -  @ViewBag.person.Name</p>
+
+```
+
+![Untitled](Untitled%2013.png)
+
+## ****ViewData****
+
+```csharp
+//OrnekController.cs
+---
+public IActionResult Index()
+{
+		ViewData["age"] = 23;
+
+    return View();
+}
+---
+```
+
+```csharp
+//Index.cshtml
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Ornek Controller, Index Sayfası</h1>
+
+<p>Yaş: @ViewData["age"]</p>
+```
+
+![Untitled](Untitled%2014.png)
+
+```csharp
+//OrnekController.cs
+---
+public IActionResult Index()
+{
+		ViewData["names"] = new List<string>() { "Serkan", "Esmanur", "Elif" };
+
+    return View();
+}
+---
+```
+
+```csharp
+//Index.cshtml
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Ornek Controller, Index Sayfası</h1>
+
+<h1>İsimler</h1> 
+@foreach (var item in ViewData["names"] as List<string>)
+{
+    <p>@item</p>
+}
+```
+
+![Untitled](Untitled%2015.png)
