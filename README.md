@@ -49,3 +49,5 @@ Model katmanı Controller ve View ‘den bağımsız olarak test edilebilir. (Ç
 ![Untitled](Notes/img/Untitled%203.png)
 
 [Controller](Notes/controller/README.md)
+
+[View](Notes/view/README.md)
