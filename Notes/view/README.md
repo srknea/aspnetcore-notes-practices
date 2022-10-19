@@ -1,10 +1,18 @@
 # View
 
-![Untitled](Untitled.png)
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled.png)
 
-![Untitled](Untitled%201.png)
+### Layout
 
-![Untitled](Untitled%202.png)
+Bir Web Sayfasında ortak alanları tanımladığımız yerdir.
+
+Genellikle content kısmı farklı sayfalarda değişir. Fakat sayfa içerisinde genelde Header, Menu ve Footer aynı kalır. 
+
+Her sayfada Header, Menu ve Footer gibi alanları tekrar tekrar tanımlamak yerine Layout kullanılır.
+
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%201.png)
+
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%202.png)
 
 ```html
 <!-- _Layout.cshtml -->
@@ -76,7 +84,7 @@
 
 ### Farklı Layout Kullanma
 
-![Untitled](Untitled%203.png)
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%203.png)
 
 ```html
 <!-- ExampleLayout.cshtml -->
@@ -141,19 +149,19 @@ namespace MyAspNetCoreApp.Web.Controllers
 </div>
 ```
 
-![Untitled](Untitled%204.png)
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%204.png)
 
 ---
 
 ### Layout Kullanmayan Sayfa
 
-![Untitled](Untitled%205.png)
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%205.png)
 
-![Untitled](Untitled%206.png)
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%206.png)
 
 [https://www.notion.so](https://www.notion.so)
 
-![Untitled](Untitled%207.png)
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%207.png)
 
 ```csharp
 // NoLayout.cshtml
@@ -179,7 +187,7 @@ namespace MyAspNetCoreApp.Web.Controllers
 </html>
 ```
 
-![Untitled](Untitled%208.png)
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%208.png)
 
 ---
 
@@ -209,7 +217,7 @@ namespace MyAspNetCoreApp.Web.Controllers
     </div>
 
     <footer>
-        <p>Header</p>
+        <p>Footer</p>
         @await RenderSectionAsync("footer", required: false)
     </footer>
    
@@ -239,4 +247,31 @@ namespace MyAspNetCoreApp.Web.Controllers
 </div>
 ```
 
-![Untitled](Untitled%209.png)
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%209.png)
+
+# ****Partial View****
+
+```csharp
+// <partial name="_LoginPartialView" />
+// @await Html.PartialAsync("_LoginPartialView")
+
+//önerilmez
+// @Html.Partial("_LoginPartialView") 
+```
+
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%2010.png)
+
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%2011.png)
+
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%2012.png)
+
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%2013.png)
+
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%2014.png)
+
+<aside>
+💡 Partial View ‘ler sadece istenilen sayfalara eklenirler. O nedenle aşağıdaki sayfaya eklemediğimiz için orada görünmüyor. Örnek olarak, biz login sayfasını login yapıldıktan sonra görmek istemeyiz bu nedenle Login işlemi için Partial View kullanabiliriz. Bu sayede istediğimiz sayfaya bu alanı ekleyebiliriz.
+
+</aside>
+
+![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%2015.png)
