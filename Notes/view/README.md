@@ -1,6 +1,6 @@
 # View
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled.png)
+![Untitled](Untitled.png)
 
 ### Layout
 
@@ -10,9 +10,9 @@ Genellikle content kısmı farklı sayfalarda değişir. Fakat sayfa içerisinde
 
 Her sayfada Header, Menu ve Footer gibi alanları tekrar tekrar tanımlamak yerine Layout kullanılır.
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%201.png)
+![Untitled](Untitled%201.png)
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%202.png)
+![Untitled](Untitled%202.png)
 
 ```html
 <!-- _Layout.cshtml -->
@@ -84,7 +84,7 @@ Her sayfada Header, Menu ve Footer gibi alanları tekrar tekrar tanımlamak yeri
 
 ### Farklı Layout Kullanma
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%203.png)
+![Untitled](Untitled%203.png)
 
 ```html
 <!-- ExampleLayout.cshtml -->
@@ -149,19 +149,19 @@ namespace MyAspNetCoreApp.Web.Controllers
 </div>
 ```
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%204.png)
+![Untitled](Untitled%204.png)
 
 ---
 
 ### Layout Kullanmayan Sayfa
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%205.png)
+![Untitled](Untitled%205.png)
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%206.png)
+![Untitled](Untitled%206.png)
 
 [https://www.notion.so](https://www.notion.so)
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%207.png)
+![Untitled](Untitled%207.png)
 
 ```csharp
 // NoLayout.cshtml
@@ -187,7 +187,7 @@ namespace MyAspNetCoreApp.Web.Controllers
 </html>
 ```
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%208.png)
+![Untitled](Untitled%208.png)
 
 ---
 
@@ -247,7 +247,7 @@ namespace MyAspNetCoreApp.Web.Controllers
 </div>
 ```
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%209.png)
+![Untitled](Untitled%209.png)
 
 # ****Partial View****
 
@@ -259,19 +259,20 @@ namespace MyAspNetCoreApp.Web.Controllers
 // @Html.Partial("_LoginPartialView") 
 ```
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%2010.png)
+![Untitled](Untitled%2010.png)
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%2011.png)
+![Untitled](Untitled%2011.png)
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%2012.png)
+![Untitled](Untitled%2012.png)
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%2013.png)
+![Untitled](Untitled%2013.png)
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%2014.png)
+![Untitled](Untitled%2014.png)
 
 <aside>
+
 💡 Partial View ‘ler sadece istenilen sayfalara eklenirler. O nedenle aşağıdaki sayfaya eklemediğimiz için orada görünmüyor. Örnek olarak, biz login sayfasını login yapıldıktan sonra görmek istemeyiz bu nedenle Login işlemi için Partial View kullanabiliriz. Bu sayede istediğimiz sayfaya bu alanı ekleyebiliriz.
 
 </aside>
 
-![Untitled](View%208ac4223ec54a4df0a0bb8d1e510d8120/Untitled%2015.png)
+![Untitled](Untitled%2015.png)
