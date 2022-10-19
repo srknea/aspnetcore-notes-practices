@@ -159,9 +159,9 @@ namespace MyAspNetCoreApp.Web.Controllers
 
 ![Untitled](Untitled%206.png)
 
-[https://www.notion.so](https://www.notion.so)
-
 ![Untitled](Untitled%207.png)
+
+![Untitled](Untitled%208.png)
 
 ```csharp
 // NoLayout.cshtml
@@ -187,11 +187,11 @@ namespace MyAspNetCoreApp.Web.Controllers
 </html>
 ```
 
-![Untitled](Untitled%208.png)
+![Untitled](Untitled%209.png)
 
 ---
 
-### ****Render Section Nedir ? Nasıl Tanımlanır ?****
+### Render Section Nedir ? Nasıl Tanımlanır ?
 
 ```csharp
 <!-- ExampleLayout.cshtml -->
@@ -247,7 +247,7 @@ namespace MyAspNetCoreApp.Web.Controllers
 </div>
 ```
 
-![Untitled](Untitled%209.png)
+![Untitled](Untitled%2010.png)
 
 # ****Partial View****
 
@@ -259,8 +259,6 @@ namespace MyAspNetCoreApp.Web.Controllers
 // @Html.Partial("_LoginPartialView") 
 ```
 
-![Untitled](Untitled%2010.png)
-
 ![Untitled](Untitled%2011.png)
 
 ![Untitled](Untitled%2012.png)
@@ -269,10 +267,20 @@ namespace MyAspNetCoreApp.Web.Controllers
 
 ![Untitled](Untitled%2014.png)
 
+![Untitled](Untitled%2015.png)
+
 <aside>
 
 💡 Partial View ‘ler sadece istenilen sayfalara eklenirler. O nedenle aşağıdaki sayfaya eklemediğimiz için orada görünmüyor. Örnek olarak, biz login sayfasını login yapıldıktan sonra görmek istemeyiz bu nedenle Login işlemi için Partial View kullanabiliriz. Bu sayede istediğimiz sayfaya bu alanı ekleyebiliriz.
 
 </aside>
 
-![Untitled](Untitled%2015.png)
+![Untitled](Untitled%2016.png)
+
+# View İçerisinde JavaScript-CSS Kodu Yazmak
+
+![Untitled](Untitled%2017.png)
+
+![Untitled](Untitled%2018.png)
+
+![Untitled](Untitled%2019.png)
