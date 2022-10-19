@@ -43,7 +43,7 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
-            **@RenderBody()**                                                                 
+            **@**RenderBody()                                                                 
         </main>
     </div>
 
@@ -182,3 +182,61 @@ namespace MyAspNetCoreApp.Web.Controllers
 ![Untitled](Untitled%208.png)
 
 ---
+
+### ****Render Section Nedir ? Nasıl Tanımlanır ?****
+
+```csharp
+<!-- ExampleLayout.cshtml -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MyAspNetCoreApp.Web</title>
+
+</head>
+<body>
+    <header>
+        <p>Header</p>
+        @await RenderSectionAsync("header", required: false)
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer>
+        <p>Header</p>
+        @await RenderSectionAsync("footer", required: false)
+    </footer>
+   
+</body>
+</html>
+```
+
+```csharp
+// Example
+// Index.cshtml
+@{
+    ViewData["Title"] = "ExampleController.cs Index Sayfası";
+    
+    Layout = "ExampleLayout";
+}
+
+@section header{
+    <p>Bu kodlar header alanına eklenecek.</p>
+}
+
+@section footer{
+    <p>Bu kodlar footer alanına eklenecek.</p>
+}
+
+<div>
+    Bu sayfa ExampleController.cs Index sayfasıdır.
+</div>
+```
+
+![Untitled](Untitled%209.png)
