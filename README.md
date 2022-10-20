@@ -51,3 +51,5 @@ Model katmanı Controller ve View ‘den bağımsız olarak test edilebilir. (Ç
 [Controller](Notes/controller/README.md)
 
 [View](Notes/view/README.md)
+
+[Model](Notes/model/README.md)
