@@ -53,3 +53,7 @@ Model katmanı Controller ve View ‘den bağımsız olarak test edilebilir. (Ç
 [View](Notes/view/README.md)
 
 [Model](Notes/model/README.md)
+
+--- 
+
+[Entity Framework](Notes/entityFramework/README.md)
