@@ -6,13 +6,13 @@
 
 ![Untitled](Untitled%201.png)
 
-### ORM
+### **ORM**
 
 - Veriye erişim teknolojisi
 - Nesne map’leme (Veritabanındaki ilgili tablolara karşılık kod tarafında bir class ile karşılamak - Tablodan her data cekmek istediğimizde o tablodaki datalara karşılık bir class’ın nesne örneğinin üretilmesidir)
 - Veri tabanına erişim sağlarken eski usller kullanmak yerine ORM aracı kullanmak hızımızı arttırır. EF Core dışındaki veri erişim teknolojilerinde de kullanılır.
 
-### LINQ
+### **LINQ**
 
 - EF Core’da sorgularımızı yazmak için kullandığımız teknolojidir.
 - Sorgulama tekniğidir.
@@ -31,6 +31,8 @@ EF Core ile sadece tip güvenli bir sorgular yazmak zorunda değiliz. Ham SQL c�
 
 - Bir class ‘dır.
 - Diğer class ‘lardan farklı olarak veri tabanında bir tablo karşılığı vardır. ( Örneğin, Product class’ına karşılık veri tabanında Product tablosu vardır)
+
+---
 
 # ORM Nedir ?
 
@@ -53,3 +55,15 @@ User class ‘ındaki her bir property User tablosunda bir sutuna karşılık ge
 1. id Id property’sine, name Name property’sine email Email property’sine maplenir. 
 2. Her satırdan User nesne örneği oluşturur. 
 3. Daha sonra tüm User ‘ları istediğimizde bu User ‘lardan liste oluşturulur.
+
+---
+
+![Untitled](Untitled%204.png)
+
+<aside>
+
+📌 Tip güvenli çalışmak projenin sürdürülebilirliğini arttırır. Hatalar henüz derleme aşamasında farkedilir.
+
+</aside>
+
+![Untitled](Untitled%205.png)
