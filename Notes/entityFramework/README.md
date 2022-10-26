@@ -6,13 +6,13 @@
 
 ![Untitled](Untitled%201.png)
 
-### **ORM**
+### ORM
 
 - Veriye erişim teknolojisi
 - Nesne map’leme (Veritabanındaki ilgili tablolara karşılık kod tarafında bir class ile karşılamak - Tablodan her data cekmek istediğimizde o tablodaki datalara karşılık bir class’ın nesne örneğinin üretilmesidir)
 - Veri tabanına erişim sağlarken eski usller kullanmak yerine ORM aracı kullanmak hızımızı arttırır. EF Core dışındaki veri erişim teknolojilerinde de kullanılır.
 
-### **LINQ**
+### LINQ
 
 - EF Core’da sorgularımızı yazmak için kullandığımız teknolojidir.
 - Sorgulama tekniğidir.
@@ -67,3 +67,17 @@ User class ‘ındaki her bir property User tablosunda bir sutuna karşılık ge
 </aside>
 
 ![Untitled](Untitled%205.png)
+
+---
+
+# EF Core Yaklaşımları
+
+![Untitled](Untitled%206.png)
+
+![Untitled](Untitled%207.png)
+
+<aside>
+
+📌 Best practice “Code First” dür.
+
+</aside>
