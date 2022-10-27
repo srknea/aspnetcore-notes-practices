@@ -81,3 +81,25 @@ User class ‘ındaki her bir property User tablosunda bir sutuna karşılık ge
 📌 Best practice “Code First” dür.
 
 </aside>
+
+# Code First
+
+![Untitled](Untitled%208.png)
+
+![Untitled](Untitled%209.png)
+
+![Untitled](Untitled%2010.png)
+
+Veritabanına karşılık gelecek olan AppDbContext sınıfını oluşturalım.
+
+![Untitled](Untitled%2011.png)
+
+AppDbContext ‘e karşılık gelen veritabanı,
+
+Products Entity’sine karşılık gelen Products tablosunu aşağıdaki kodlar ile oluşturalım.
+
+![Untitled](Untitled%2012.png)
+
+![Untitled](Untitled%2013.png)
+
+![Untitled](Untitled%2014.png)
