@@ -104,8 +104,6 @@ Products Entity’sine karşılık gelen Products tablosunu aşağıdaki kodlar 
 
 ![Untitled](Untitled%2014.png)
 
-![Untitled](Untitled%2015.png)
-
 ### Product tablosuna data kaydetme ve tablodan data silme:
 
 ```csharp
